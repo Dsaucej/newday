@@ -5,7 +5,7 @@ require("dotenv").config();
 async function getNews(country) {
   try {
     const response = await axios.get(
-      `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${process.env.NEWS_API_KEY}&pageSize=8`
+      `https://api.newscatcherapi.com/v2/search?q=Tesla?country=${country}&apiKey=${process.env.NEWS_API_KEY}&pageSize=8`
     );
     return {
       country: country,
